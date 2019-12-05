@@ -1,7 +1,9 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'directors_database'
+require pp 
 
 def directors_totals(nds)
+  pp directors_totals 
   # Remember, it's always OK to pretty print what you get *in* to make sure
   # that you know what you're starting with!
   #
@@ -18,20 +20,7 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
-  nil
-  directors_totals = 
-  {
-        "Stephen Spielberg"=>1357566430,
-        "Russo Brothers"=>2281002470,
-        "James Cameron"=>2571020373,
-        "Spike Lee"=>256624217,
-        "Wachowski Siblings"=>806180282,
-        "Robert Zemeckis"=>1273838385,
-        "Quentin Tarantino"=>662738268,
-        "Martin Scorsese"=>636812242,
-        "Francis Ford Coppola"=>509719258
-      }
-      
+  
     grand_total = 0
 row_index = 0
 while row_index < vm.length do
