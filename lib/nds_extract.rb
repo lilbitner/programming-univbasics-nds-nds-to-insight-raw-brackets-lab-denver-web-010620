@@ -37,3 +37,4 @@ while row_index < vm.length do
   row_index += 1
 end
 end
+p grand_total
