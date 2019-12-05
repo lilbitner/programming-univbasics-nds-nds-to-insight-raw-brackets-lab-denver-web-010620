@@ -1,7 +1,9 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'directors_database'
+require pp 
 
 def directors_totals(nds)
+  pp directors_totals 
   # Remember, it's always OK to pretty print what you get *in* to make sure
   # that you know what you're starting with!
   #
@@ -18,5 +20,21 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
-  nil
+  
+    grand_total = 0
+row_index = 0
+while row_index < vm.length do
+  column_index = 0
+  while column_index < vm[row_index].length do
+    inner_len = vm[row_index][column_index].length
+    inner_index = 0
+    while inner_index < inner_len do  
+      grand_total += vm[row_index][column_index][inner_index][:totals]
+      inner_index += 1
+    end
+    column_index += 1
+  end
+  row_index += 1
 end
+end
+p grand_total
