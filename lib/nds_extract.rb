@@ -29,7 +29,7 @@ while row_index < vm.length do
     inner_len = vm[row_index][column_index].length
     inner_index = 0
     while inner_index < inner_len do  
-      grand_total += vm[row_index][column_index][inner_index][:price]
+      grand_total += vm[row_index][column_index][inner_index][:totals]
       inner_index += 1
     end
     column_index += 1
